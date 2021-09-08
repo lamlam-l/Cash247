@@ -1,0 +1,48 @@
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "lam3",
+    "password": "1234"
+}
+
+### register
+
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "lam4",
+    "password": "1234"
+}
+
+### get user data
+
+POST http://localhost:5000/profile
+Content-Type: application/json
+
+{
+    "name": "lam"
+}
+
+### update user data
+POST http://localhost:5000/profile/update
+Content-Type: application/json
+
+{
+    "name": "lam4",
+    "newUser": {
+        "name": "lammmmm",
+        "email": "lam.2002.2015@gmail.com"
+    }
+}
+
+### change password
+POST http://localhost:5000/profile/changePassword
+Content-Type: application/json
+
+{
+    "name": "lam",
+    "currentPassword": "1234",
+    "newPassword": "123"
+}

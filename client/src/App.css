@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.colorTransition {
+    color: black !important;
+    transition: color 0.3s;
+}
+
+.colorTransition:hover {
+    color: rgb(161, 197, 255) !important;
+    cursor: pointer;
+}
+
+/* _________________________________/dashboard/details______________________________________________ */
+
+.dashboard-details {
+    border-radius: 15px;
+}
+
+.dashboard-details .card-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dashboard-details hr {
+    width: 100%;
+    height: 2px;
+}
+
+.dashboard-details .card-text {
+    font-size: 18px;
+}
+
+.volatility-positive {
+    display: inline-block;
+    color: rgb(0, 160, 0);
+}
+
+.volatility-negative {
+    margin-bottom: 0;
+    display: inline-block;
+    color: rgb(204, 11, 11);
+}
+
+.volatility-nochange {
+    display: inline-block;
+    color: rgb(82, 82, 82);
+}
+
+.dashboard-details .walletEdit {
+    font-size: 25px;
+    float: right;
+}
+
+/*___________________________________________________________________________________________________*/
+
+/* _________________________________/dashboard/details______________________________________________ */
+
+.dashboard-options {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dashboard-options>* {
+    font-size: 25px;
+}
+
+/* _________________________________________________________________________________________________ */
+
+/* ___________________________________________year__________________________________________________ */
+
+.year {
+    min-width: 900px;
+}
+
+.year .trade {
+    height: 50px;
+    border-top: solid 1px rgb(192, 192, 192);
+    border-bottom: solid 1px rgb(192, 192, 192);
+    display: flex;
+    text-align: center;
+}
+
+.year .trade .title {
+    text-align: left;
+    font-weight: bold;
+    line-height: 49px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.year .trade .title-by-trade {
+    text-align: left;
+    font-weight: bold;
+    line-height: 49px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.year .trade .type {
+    line-height: 49px;
+    text-align: right;
+}
+
+.year .trade .dayInWeek {
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+    left: 75px;
+}
+
+.year .trade .amount {
+    margin-bottom: 0;
+    line-height: 49px;
+}
+
+.year .trade .description {
+    display: none;
+    font-size: 25px;
+    line-height: 49px;
+}
+
+.year .trade .addTrade {
+    display: none;
+    font-size: 25px;
+    line-height: 49px;
+}
+
+.year .trade .deleteTrade {
+    display: none;
+    font-size: 25px;
+    line-height: 49px;
+}
+
+.year .trade:hover .description {
+    display: block;
+}
+
+.year .trade:hover .addTrade {
+    display: block;
+}
+
+.year .trade:hover .deleteTrade {
+    display: block;
+}
+
+/* _________________________________________________________________________________________________ */

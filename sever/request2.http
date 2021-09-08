@@ -1,0 +1,83 @@
+### get wallets data
+POST http://localhost:5000/dashboard/wallet/getWallets
+Content-Type: application/json
+
+{
+    "name": "lam"
+}
+
+### add a wallet
+POST http://localhost:5000/dashboard/wallet/addwallet
+Content-Type: application/json
+
+{
+    "name": "lam",
+    "wallet": {
+        "walletName": "vi dien tu",
+        "balance": 2310
+    }
+}
+
+### update a wallet
+POST http://localhost:5000/dashboard/wallet/updateWallet
+Content-Type: application/json
+
+{
+    "name": "lam",
+    "walletId": 1,
+    "newWallet": {
+        "newWalletName": "so cuc ki do",
+        "newBalance": 5500
+    }
+}
+
+### delete a wallet
+POST http://localhost:5000/dashboard/wallet/deleteWallet
+Content-Type: application/json
+
+{
+    "name": "Lam",
+    "walletId": 1
+}
+
+### add a trade
+POST http://localhost:5000/dashboard/trade/addTrade
+Content-Type: application/json
+
+{
+    "name": "lam",
+    "walletId": 1,
+    "trades": {
+        "spendType": "charity & donations",
+        "amount": 1000000,
+        "decription": "1232 abx ifsf fn sdfj d"
+    }
+}
+
+### update a trade
+
+POST http://localhost:5000/dashboard/trade/updateTrade
+Content-Type: application/json
+
+{
+    "name": "Lam",
+    "walletId": 1,
+    "tradeId": "61342ed0d195f2dad933f5f7",
+    "trades": {
+        "newDay": 12,
+        "newMonth": 12,
+        "newReciveType": "other",
+        "newAmount": 1234,
+        "newDecription": "yeah"
+    }
+}
+
+### delete a trade
+POST http://localhost:5000/dashboard/trade/deleteTrade
+Content-Type: application/json
+
+{
+    "name": "lam",
+    "walletId": 1,
+    "tradeId": "61361e2ab1cea623a4205ccf"
+}
