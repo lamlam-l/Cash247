@@ -55,14 +55,14 @@ function Trade(props) {
                 <Col xs={3}>
                     <h4 className="amount">{amount}</h4>
                 </Col>
-                <Col xs={1} className="description">
-                    <Decription />
+                <Col xs={1} className="description" trade={trade}>
+                    <Decription trade={trade}  />
                 </Col>
                 <Col xs={1} className="editTrade">
                     <EditTrade walletId={walletId} trade={trade} />
                 </Col>
                 <Col xs={1} className="deleteTrade">
-                    <DeleteTrade />
+                    <DeleteTrade walletId={walletId} trade={trade} />
                 </Col>
             </Row>)
     } else if (view.currentView === 'byTrade') {
@@ -78,13 +78,13 @@ function Trade(props) {
                 <h4 className="amount">{amount}</h4>
             </Col>
             <Col xs={1} className="description">
-                <Decription />
+                <Decription trade={trade}  />
             </Col>
             <Col xs={1} className="editTrade">
                 <EditTrade walletId={walletId} trade={trade} />
             </Col>
             <Col xs={1} className="deleteTrade">
-                <DeleteTrade />
+                <DeleteTrade walletId={walletId} trade={trade} />
             </Col>
         </Row>)
     }

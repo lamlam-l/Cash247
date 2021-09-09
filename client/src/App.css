@@ -120,6 +120,7 @@
 }
 
 .year .trade .description {
+    position: relative;
     display: none;
     font-size: 25px;
     line-height: 49px;
@@ -149,41 +150,48 @@
     display: block;
 }
 
-
-
 /* edit trade button */
+
 .container-radio {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 30px;
 }
+
 .container-radio .list {
     flex: 0 0 20rem;
     list-style-type: none;
 }
+
 .container-radio .list__item {
     position: relative;
 }
-.container-radio .list__item:hover > .label {
+
+.container-radio .list__item:hover>.label {
     color: rgb(76, 130, 237);
 }
-.container-radio .list__item:hover > .label::before {
+
+.container-radio .list__item:hover>.label::before {
     border: 3px solid rgb(76, 130, 237);
     margin-right: 2rem;
 }
+
 .container-radio .radio-btn {
     position: absolute;
     opacity: 0;
     visibility: hidden;
 }
-.container-radio .radio-btn:checked + .label {
+
+.container-radio .radio-btn:checked+.label {
     color: rgb(76, 130, 237);
 }
-.container-radio .radio-btn:checked + .label::before {
+
+.container-radio .radio-btn:checked+.label::before {
     margin-right: 2rem;
     border: 9px solid rgb(76, 130, 237);
 }
+
 .container-radio .label {
     display: flex;
     align-items: center;
@@ -193,6 +201,7 @@
     cursor: pointer;
     transition: all 0.25s linear;
 }
+
 .container-radio .label::before {
     display: inline-block;
     content: "";
@@ -203,10 +212,15 @@
     border-radius: 50%;
     transition: all 0.25s linear;
 }
+
 /* _________________ */
 
 .input-date {
     margin-left: 50px;
+}
+
+.year .trade .description-icon:hover {
+    cursor: pointer;
 }
 
 /* _________________________________________________________________________________________________ */

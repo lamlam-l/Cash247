@@ -30,7 +30,7 @@ function EditTrade(props) {
         year: trade.year,
         spendType: trade.spendType ? trade.spendType : '',
         reciveType: trade.reciveType ? trade.reciveType : '',
-        amount: localStorage.getItem('currentUnit') === 'USD' ? trade.amount : trade.amount*23500,
+        amount: localStorage.getItem('currentUnit') === 'USD' ? trade.amount : trade.amount * 23500,
         decription: trade.decription,
     })
     function onChangeForm(e) {
@@ -38,7 +38,7 @@ function EditTrade(props) {
             setEditTradeForm({ ...editTradeForm, [e.target.name]: e.target.value, reciveType: '' })
         } else if (e.target.name === 'reciveType') {
             setEditTradeForm({ ...editTradeForm, [e.target.name]: e.target.value, spendType: '' })
-        } else 
+        } else
             setEditTradeForm({ ...editTradeForm, [e.target.name]: e.target.value })
     }
 
@@ -47,7 +47,7 @@ function EditTrade(props) {
     var typesToShow
     if (type === 'spend')
         typesToShow = <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             onChange={onChangeForm}
             name="spendType"
@@ -58,7 +58,7 @@ function EditTrade(props) {
         </select>
     else if (type === 'recive')
         typesToShow = <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             onChange={onChangeForm}
             name="reciveType"
@@ -96,7 +96,7 @@ function EditTrade(props) {
                     newYear: parseInt(date.substring(0, 4)),
                     newSpendType: editTradeForm.spendType,
                     newReciveType: editTradeForm.reciveType,
-                    newAmount: localStorage.getItem('currentUnit') === 'USD' ? editTradeForm.amount : editTradeForm.amount/23500,
+                    newAmount: localStorage.getItem('currentUnit') === 'USD' ? editTradeForm.amount : editTradeForm.amount / 23500,
                     newDecription: editTradeForm.decription,
                 }
             })
@@ -108,7 +108,6 @@ function EditTrade(props) {
                 return
             }
         } catch (error) {
-            console.log(error)
             setAlert({ variant: 'danger', message: error.message })
             setTimeout(() => { setAlert(null) }, 2000)
             return
@@ -135,16 +134,16 @@ function EditTrade(props) {
                     <Row>
                         <Col>
                             <Form.Group className="mb-3">
-                                <div class="container-radio">
-                                    <ul class="list">
-                                        <li class="list__item">
-                                            <input type="radio" class="radio-btn" name="choice" id="a-opt" />
-                                            <label for="a-opt" class="label" onClick={() => changeType('spend')}>spend</label>
+                                <div className="container-radio">
+                                    <ul className="list">
+                                        <li className="list__item">
+                                            <input type="radio" className="radio-btn" name="choice" id="a-opt" />
+                                            <label htmlFor="a-opt" className="label" onClick={() => changeType('spend')}>spend</label>
                                         </li>
 
-                                        <li class="list__item">
-                                            <input type="radio" class="radio-btn" name="choice" id="b-opt" />
-                                            <label for="b-opt" class="label" onClick={() => changeType('recive')}>recive</label>
+                                        <li className="list__item">
+                                            <input type="radio" className="radio-btn" name="choice" id="b-opt" />
+                                            <label htmlFor="b-opt" className="label" onClick={() => changeType('recive')}>recive</label>
                                         </li>
                                     </ul>
                                 </div>

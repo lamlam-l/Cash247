@@ -48,9 +48,9 @@ Content-Type: application/json
     "name": "lam",
     "walletId": 1,
     "trades": {
-        "spendType": "charity & donations",
-        "amount": 1000000,
-        "decription": "1232 abx ifsf fn sdfj d"
+        "reciveType": "other",
+        "amount": 15,
+        "decription": "123"
     }
 }
 

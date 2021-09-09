@@ -13,9 +13,7 @@ function Year(props) {
         <Trade trade={wallet.trades[1]} view={view} walletId={wallet.walletId}/>
         <Trade trade={wallet.trades[2]} view={view} walletId={wallet.walletId}/>
         <Trade trade={wallet.trades[3]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[4]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[5]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[6]} view={view} walletId={wallet.walletId}/>
+        {/* <Trade trade={wallet.trades[4]} view={view} walletId={wallet.walletId}/> */}
         
     </div>)
 }
