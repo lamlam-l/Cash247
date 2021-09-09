@@ -47,7 +47,7 @@ Content-Type: application/json
 {
     "name": "lam",
     "walletId": 1,
-    "trades": {
+    "trade": {
         "reciveType": "other",
         "amount": 15,
         "decription": "123"
@@ -79,5 +79,5 @@ Content-Type: application/json
 {
     "name": "lam",
     "walletId": 1,
-    "tradeId": "61361e2ab1cea623a4205ccf"
+    "tradeId": "613975c4e499d6d756a7cf6c"
 }

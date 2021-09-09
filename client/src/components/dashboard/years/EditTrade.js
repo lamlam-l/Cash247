@@ -137,13 +137,13 @@ function EditTrade(props) {
                                 <div className="container-radio">
                                     <ul className="list">
                                         <li className="list__item">
-                                            <input type="radio" className="radio-btn" name="choice" id="a-opt" />
-                                            <label htmlFor="a-opt" className="label" onClick={() => changeType('spend')}>spend</label>
+                                            <input type="radio" className="radio-btn" name="choice" id="a-opte" />
+                                            <label htmlFor="a-opte" className="label" onClick={() => changeType('spend')}>spend</label>
                                         </li>
 
                                         <li className="list__item">
-                                            <input type="radio" className="radio-btn" name="choice" id="b-opt" />
-                                            <label htmlFor="b-opt" className="label" onClick={() => changeType('recive')}>recive</label>
+                                            <input type="radio" className="radio-btn" name="choice" id="b-opte" />
+                                            <label htmlFor="b-opte" className="label" onClick={() => changeType('recive')}>recive</label>
                                         </li>
                                     </ul>
                                 </div>
@@ -174,7 +174,7 @@ function EditTrade(props) {
                     </Row>
                     <Row>
                         <Form.Group className="mb-3">
-                            <Form.Label>amount</Form.Label>
+                            <Form.Label>{`amount: (${localStorage.getItem('currentUnit')})`}</Form.Label>
                             <Form.Control
                                 type="number"
                                 name="amount"

@@ -2,22 +2,21 @@ import { useContext } from 'react'
 
 import { context } from '../../../contextProvider/context'
 import Trade from './Trade'
+import AddTrade from './AddTrade'
 
 function Year(props) {
     //get necessary data
     const wallet = props.wallets.filter((wallet) =>
-        wallet.walletId == localStorage.getItem('walletId'))[0]
+        wallet.walletId.toString() === localStorage.getItem('walletId'))[0]
     const { view } = useContext(context)
+    // wallet.trades.map((trade) => <Trade trade={trade} view={view} walletId={wallet.walletId}/>)
+    //<AddTrade walletId={wallet.walletId}/>
     return (<div className="year">
-        <Trade trade={wallet.trades[0]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[1]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[2]} view={view} walletId={wallet.walletId}/>
-        <Trade trade={wallet.trades[3]} view={view} walletId={wallet.walletId}/>
-        {/* <Trade trade={wallet.trades[4]} view={view} walletId={wallet.walletId}/> */}
+        {
+            
+        }
         
     </div>)
 }
 
 export default Year
-
-//year

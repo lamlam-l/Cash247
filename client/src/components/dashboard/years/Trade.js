@@ -46,10 +46,10 @@ function Trade(props) {
     if (view.currentView === 'byDay') {
         return (
             <Row className="trade">
-                <Col xs={3}>
+                <Col xs={2}>
                     <h2 className="title">{trade.day}</h2>
                 </Col>
-                <Col xs={3}>
+                <Col xs={4}>
                     <h4 className="type">{type}</h4>
                 </Col>
                 <Col xs={3}>
@@ -67,10 +67,10 @@ function Trade(props) {
             </Row>)
     } else if (view.currentView === 'byTrade') {
         return (<Row className="trade">
-            <Col xs={3}>
+            <Col xs={4}>
                 <h2 className="title-by-trade">{type}</h2>
             </Col>
-            <Col xs={3}>
+            <Col xs={2}>
                 <h4 className="type">{trade.day}</h4>
                 <p className="dayInWeek">{dayInWeek}</p>
             </Col>

@@ -75,15 +75,19 @@
 /* ___________________________________________year__________________________________________________ */
 
 .year {
-    min-width: 900px;
+    min-width: 800px;
 }
 
 .year .trade {
     height: 50px;
-    border-top: solid 1px rgb(192, 192, 192);
-    border-bottom: solid 1px rgb(192, 192, 192);
+    /* border-top: solid 1px rgb(192, 192, 192);
+    border-bottom: solid 1px rgb(192, 192, 192); */
     display: flex;
     text-align: center;
+}
+
+.year .trade:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 .year .trade .title {
@@ -222,5 +226,45 @@
 .year .trade .description-icon:hover {
     cursor: pointer;
 }
+
+/* ___add a trade___ */
+
+.year .add-trade-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    transition: background-color 0.2s;
+    /* border-top: solid 1px rgb(192, 192, 192);
+    border-bottom: solid 1px rgb(192, 192, 192); */
+}
+
+.year .add-trade-btn .add-trade-btn-icon {
+    width: 50px;
+    padding: 3px;
+    font-size: 50px;
+    border: 3px solid rgb(76, 130, 237);
+    border-radius: 50%;
+    color: rgb(76, 130, 237);
+    transition: all 0.2s;
+}
+
+.year .add-trade-btn:hover {
+    background-color: rgb(76, 130, 237);
+    cursor: pointer;
+}
+
+.year .add-trade-btn:hover .add-trade-btn-icon{
+    color: white;
+    border: 3px solid white;
+}
+
+.year .add-trade-form {
+    padding: 20px;
+}
+/* ______________start year______________ */
+
+
 
 /* _________________________________________________________________________________________________ */

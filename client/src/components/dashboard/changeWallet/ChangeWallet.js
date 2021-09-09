@@ -14,14 +14,14 @@ function ChangeWallet(props) {
         <Dropdown>
             <Dropdown.Toggle variant="info" id="dropdown-basic">
                 {wallets.map((wallet) => {
-                    if (wallet.walletId == currentWalletId)
+                    if (wallet.walletId.toString() === currentWalletId)
                         return wallet.walletName
                 })}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
                 {wallets.map((wallet) => {
-                    if (wallet.walletId != currentWalletId)
+                    if (wallet.walletId.toString() !== currentWalletId)
                         return <Dropdown.Item onClick={() => changeWallet(wallet.walletId)}>{wallet.walletName}</Dropdown.Item>   
                 })}
             </Dropdown.Menu>

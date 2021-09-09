@@ -6,6 +6,7 @@ import Year from './years/Year'
 import Details from './details/Details'
 import Options from './options/Options'
 import ChangeWallet from './changeWallet/ChangeWallet'
+import Detail from './details/Details'
 
 function Dashboard() {
 
@@ -29,7 +30,8 @@ function Dashboard() {
                     localStorage.setItem('walletId', 1)
                 setDashboard({
                     view: <>
-                        <Options />
+                        {/* <Detail wallet={wallets[localStorage.getItem('walletId')]} />
+                        <Options /> */}
                         <Year wallets={wallets} />
                     </>,
                     onLoading: false
@@ -47,5 +49,3 @@ function Dashboard() {
 }
 
 export default Dashboard
-
-////dfsfsdfg

@@ -7,7 +7,7 @@ class Trade {
     //POST /dashboard/trade/addTrade
     async addTrade(req, res) {
         const { name, walletId } = req.body
-        const { day, month, year, spendType, reciveType, amount, decription } = req.body.trades
+        const { day, month, year, spendType, reciveType, amount, decription } = req.body.trade
         try {
             //verified
             const user = await Users.findOne({ name })
