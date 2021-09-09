@@ -1,12 +1,12 @@
 import { Row, Col } from 'react-bootstrap'
 
-import AddTrade from "./AddTrade"
+import EditTrade from "./EditTrade"
 import DeleteTrade from "./DeleteTrade"
 import Decription from "./Decription"
 
 function Trade(props) {
     //get necessary data
-    const { trade, view } = props
+    const { trade, view, walletId } = props
     const unit = localStorage.getItem('currentUnit')
 
     //amount
@@ -22,19 +22,17 @@ function Trade(props) {
             aspect = 1
             break
     }
-    const amountFormated = new Intl.NumberFormat('us-US', { style: 'currency', currency: unit })
-        .format(trade.amount * aspect)
+    const amountFormated = new Intl.NumberFormat('us-US', { style: 'currency', currency: unit }).format(trade.amount * aspect)
     var amount
-    if (trade.spendType)
+    if (trade.reciveType)
         amount = <p className='volatility-positive'>+{amountFormated}</p>
-    else if (trade.reciveType)
+    else if (trade.spendType)
         amount = <p className='volatility-negative'>-{amountFormated}</p>
     else
         amount = <p className='volatility-nochange'>{amountFormated}</p>
 
     //type
     const type = trade.spendType ? trade.spendType : trade.reciveType
-    console.log(view.currentView === 'byTrade')
 
     //get day
     const d = new Date()
@@ -43,6 +41,7 @@ function Trade(props) {
     d.setDate(trade.day)
     const week = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
     const dayInWeek = week[d.getDay()]
+    // console.log(wallet)
 
     if (view.currentView === 'byDay') {
         return (
@@ -59,8 +58,8 @@ function Trade(props) {
                 <Col xs={1} className="description">
                     <Decription />
                 </Col>
-                <Col xs={1} className="addTrade">
-                    <AddTrade />
+                <Col xs={1} className="editTrade">
+                    <EditTrade walletId={walletId} trade={trade} />
                 </Col>
                 <Col xs={1} className="deleteTrade">
                     <DeleteTrade />
@@ -81,8 +80,8 @@ function Trade(props) {
             <Col xs={1} className="description">
                 <Decription />
             </Col>
-            <Col xs={1} className="addTrade">
-                <AddTrade />
+            <Col xs={1} className="editTrade">
+                <EditTrade walletId={walletId} trade={trade} />
             </Col>
             <Col xs={1} className="deleteTrade">
                 <DeleteTrade />

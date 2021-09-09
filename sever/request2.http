@@ -62,8 +62,8 @@ Content-Type: application/json
 {
     "name": "Lam",
     "walletId": 1,
-    "tradeId": "61342ed0d195f2dad933f5f7",
-    "trades": {
+    "tradeId": "6132d262810fb361beabd28e",
+    "trade": {
         "newDay": 12,
         "newMonth": 12,
         "newReciveType": "other",
