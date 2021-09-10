@@ -34,7 +34,7 @@ function Register() {
             if (respone.data.success) {
                 localStorage.setItem('name', registerForm.name)
                 localStorage.setItem('currentUnit', 'USD')
-                history.push('/profile')
+                history.push('/dashboard')
             } else {
                 setAlert({ variant: "danger", message: respone.data.message })
                 setTimeout(() => { setAlert(null) }, 2000)

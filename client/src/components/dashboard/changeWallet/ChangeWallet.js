@@ -2,25 +2,25 @@ import { Dropdown } from 'react-bootstrap'
 
 
 function ChangeWallet(props) {
-    console.log(1)
     const wallets = props.wallets
     const currentWalletId = localStorage.getItem('walletId')
     function changeWallet(walletId) {
         localStorage.setItem('walletId', walletId)
         window.location.reload(false)
     }
-
+    // console.log(wallets)
     return (<>
-        <Dropdown>
-            <Dropdown.Toggle variant="info" id="dropdown-basic">
+        <Dropdown style={{width: '100%'}}>
+            <Dropdown.Toggle variant="dark" id="dropdown-basic" style={{width: '100%'}}>
                 {wallets.map((wallet) => {
                     if (wallet.walletId.toString() === currentWalletId)
                         return wallet.walletName
                 })}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu variant="dark" style={{width: '100%'}}>
                 {wallets.map((wallet) => {
+                    console.log(wallet)
                     if (wallet.walletId.toString() !== currentWalletId)
                         return <Dropdown.Item onClick={() => changeWallet(wallet.walletId)}>{wallet.walletName}</Dropdown.Item>   
                 })}

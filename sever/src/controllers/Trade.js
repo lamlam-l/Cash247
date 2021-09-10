@@ -22,7 +22,6 @@ class Trade {
             const d = new Date()
             if (reciveType) {
                 wallet.balance += amount
-                console.log(undefined == 0)
                 wallet.trades.push({
                     day: !day ? d.getDate() : day,
                     month: !month ? d.getMonth() : month,
@@ -36,7 +35,6 @@ class Trade {
             }
             if (spendType) {
                 wallet.balance -= amount
-                console.log(undefined == 0)
                 wallet.trades.push({
                     day: !day ? d.getDate() : day,
                     month: !month ? d.getMonth() : month,

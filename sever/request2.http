@@ -3,7 +3,7 @@ POST http://localhost:5000/dashboard/wallet/getWallets
 Content-Type: application/json
 
 {
-    "name": "lam"
+    "name": "lam2"
 }
 
 ### add a wallet
@@ -36,7 +36,7 @@ POST http://localhost:5000/dashboard/wallet/deleteWallet
 Content-Type: application/json
 
 {
-    "name": "Lam",
+    "name": "lam2",
     "walletId": 1
 }
 

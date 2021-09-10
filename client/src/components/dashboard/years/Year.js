@@ -48,6 +48,7 @@ function Year(props) {
 
     //create trade list
     function createTradeList(year) {
+        
         return (<div className="month-in-year"><Accordion defaultActiveKey={d.getMonth().toString()}>
             {
                 ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((month, id) => {
@@ -97,13 +98,13 @@ function Year(props) {
         <div className="switch-year">
             <FontAwesomeIcon
                 icon={faChevronLeft}
-                className="add-trade-btn-icon colorTransition"
+                className="switch-year-btn colorTransition"
                 onClick={() => switchYear('previous')}
             />
             <p>{year}</p>
             <FontAwesomeIcon
                 icon={faChevronRight}
-                className="add-trade-btn-icon colorTransition"
+                className="switch-year-btn colorTransition"
                 onClick={() => switchYear('next')} />
         </div>
         <div className="trade-list">

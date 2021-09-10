@@ -75,7 +75,7 @@ function UpdateWalletForm(props) {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Balance</Form.Label>
+                        <Form.Label>Balance ({localStorage.getItem('currentUnit')})</Form.Label>
                         <Form.Control
                             name="balance"
                             type="number"

@@ -7,7 +7,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { url } from '../../../constants/constants'
 import AlertBox from '../../alert/AlertBox'
 
-function AddNewWallet() {
+function AddNewWallet(props) {
     const [show, setShow] = useState(false)
     const [alert, setAlert] = useState(null)
     const [addWalletForm, setAddWalletForm] = useState({
@@ -32,8 +32,10 @@ function AddNewWallet() {
                     balance: addWalletForm.balance
                 }
             })
-            if (respone.data.success)
+            if (respone.data.success) {
+                console.log(respone)
                 window.location.reload(false)
+            }
             else {
                 setAlert({ variant: "danger", message: respone.data.message })
                 setTimeout(() => { setAlert(null) }, 2000)
@@ -53,6 +55,7 @@ function AddNewWallet() {
                 icon={faPlus}
                 className="colorTransition"
                 onClick={handleShow}
+                style={{ fontSize: props.bigger ? '100px' : '' }}
             />
             <Modal
                 show={show}
@@ -79,7 +82,7 @@ function AddNewWallet() {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Balance</Form.Label>
+                            <Form.Label>Balance ({localStorage.getItem('currentUnit')})</Form.Label>
                             <Form.Control
                                 name="balance"
                                 type="number"

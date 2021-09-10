@@ -26,17 +26,17 @@ function Options() {
 
     return (<>
         <div className="dashboard-options">
-            <div className="add colorTransition">
+            <div className="add colorTransition" title="add a wallet">
                 <AddNewWallet />
             </div>
-            <div className="view">
+            <div className="view" title="switch currency unit">
                 <FontAwesomeIcon
                     icon={faMoneyBill}
                     className="colorTransition"
                     onClick={changeUnit}
                 />
             </div>
-            <div className="search">
+            <div className="search" title="change view by Day - by Trade">
                 <FontAwesomeIcon
                     icon={faTable}
                     className="colorTransition"

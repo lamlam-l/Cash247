@@ -25,7 +25,7 @@ function Detail(props) {
 
     //volatility
     const d = new Date()
-    const tradesThisMonth = trades.filter((trade) => (trade.year === d.getFullYear()) && (trade.month === d.getMonth()))
+    const tradesThisMonth = trades.filter((trade) => (trade.year === d.getFullYear()) && (trade.month === d.getMonth()+1))
     var volatility = 0
     tradesThisMonth.map((trade) => {
         if (trade.spendType)
