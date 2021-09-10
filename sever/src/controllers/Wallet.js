@@ -71,7 +71,7 @@ class Wallet {
             if (newBalance < wallet.balance) {
                 const updateBalanceTrade = {
                     day: d.getDate(),
-                    month: d.getMonth(),
+                    month: d.getMonth() + 1,
                     year: d.getFullYear(),
                     spendType: 'update balance',
                     amount: wallet.balance - newBalance,
@@ -87,7 +87,7 @@ class Wallet {
             } else if (newBalance > wallet.balance) {
                 const updateBalanceTrade = {
                     day: d.getDate(),
-                    month: d.getMonth(),
+                    month: d.getMonth() + 1,
                     year: d.getFullYear(),
                     reciveType: 'update balance',
                     amount: newBalance - wallet.balance,

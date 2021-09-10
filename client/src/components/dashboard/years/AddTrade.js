@@ -26,7 +26,8 @@ function AddTrade(props) {
 
     //handleDateChange
     const d = new Date()
-    const [date, setDate] = useState(`${d.getFullYear()}-${d.getMonth() < 10 ? '0' + d.getMonth() : d.getMonth()}-${d.getDate() < 10 ? '0' + d.getDate() : d.getDate()}`)
+    const [date, setDate] = useState(`${d.getFullYear()}-${d.getMonth()+1 < 10 ? '0' + (d.getMonth()+1).toString() : (d.getMonth()+1).toString()}-${d.getDate() < 10 ? '0' + d.getDate() : d.getDate()}`)
+
     function onChangeDate(e) {
         setDate(e.target.value)
     }
@@ -180,7 +181,7 @@ function AddTrade(props) {
                         required />
                 </FloatingLabel>
             </Row>
-            <Button variant="success" type="submit" style={{ marginRight: '100px', float: 'right' }}>Submit</Button>
+            <Button variant="success" type="submit" style={{ marginRight: '100px', float: 'right' }}>Add</Button>
         </Form>
     </>)
 }

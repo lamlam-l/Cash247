@@ -75,7 +75,39 @@
 /* ___________________________________________year__________________________________________________ */
 
 .year {
-    min-width: 800px;
+    position: relative;
+    /* min-width: 800px; */
+    width: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px red solid;
+    margin: auto;
+}
+
+.year .switch-year {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.year .trade-list {
+    overflow-y: auto;
+    position: relative;
+    width: 8800px;
+    display: table;
+    transition: all 1s;
+}
+
+.year .month-in-year {
+    display: table-cell;
+    table-layout: fixed;
+    overflow-y: auto;
+    width: 800px;
+}
+
+.year .switch-year>* {
+    font-size: 20px;
+    margin: 0px 50px;
 }
 
 .year .trade {
@@ -114,7 +146,7 @@
 .year .trade .dayInWeek {
     display: inline-block;
     position: relative;
-    bottom: 30px;
+    bottom: 25px;
     left: 75px;
 }
 
@@ -236,6 +268,7 @@
     height: 50px;
     background-color: white;
     transition: background-color 0.2s;
+    margin-top: 10px;
     /* border-top: solid 1px rgb(192, 192, 192);
     border-bottom: solid 1px rgb(192, 192, 192); */
 }

@@ -29,11 +29,17 @@ function Dashboard() {
                 if (!localStorage.getItem('walletId'))
                     localStorage.setItem('walletId', 1)
                 setDashboard({
-                    view: <>
-                        {/* <Detail wallet={wallets[localStorage.getItem('walletId')]} />
-                        <Options /> */}
+                    view: <div className="w3-animate-top">
+                        <Detail wallet={wallets[localStorage.getItem('walletId') - 1]} />
+                        <Options />
                         <Year wallets={wallets} />
-                    </>,
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>,
                     onLoading: false
                 })
 
