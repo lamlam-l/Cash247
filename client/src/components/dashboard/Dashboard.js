@@ -23,7 +23,6 @@ function Dashboard() {
         const wallets = respone.data.wallets
         if (dashboard.onLoading) {
             if (wallets.length === 0) {
-                console.log(wallets)
                 setDashboard({
                     view: <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh' }}>
                         <AddNewWallet bigger/>

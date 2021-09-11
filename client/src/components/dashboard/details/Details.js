@@ -51,7 +51,7 @@ function Detail(props) {
                 <Card.Text>Balance: {balance}</Card.Text>
                 <Card.Text>Owner: you</Card.Text>
                 <Card.Text>Volatility this month: {volatilityToShow}</Card.Text>
-                <Card.Link href="#">view full report</Card.Link>
+                <Card.Link href="/report">view full report</Card.Link>
             </Card.Body>
         </Card>
     </>)

@@ -11,14 +11,14 @@ function ChangeWallet(props) {
     // console.log(wallets)
     return (<>
         <Dropdown style={{width: '100%'}}>
-            <Dropdown.Toggle variant="dark" id="dropdown-basic" style={{width: '100%'}}>
+            <Dropdown.Toggle variant="light" id="dropdown-basic" style={{width: '100%'}}>
                 {wallets.map((wallet) => {
                     if (wallet.walletId.toString() === currentWalletId)
                         return wallet.walletName
                 })}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu variant="dark" style={{width: '100%'}}>
+            <Dropdown.Menu variant="light" style={{width: '100%'}}>
                 {wallets.map((wallet) => {
                     console.log(wallet)
                     if (wallet.walletId.toString() !== currentWalletId)

@@ -8,6 +8,7 @@ import Register from './components/loginAndRegister/Register'
 import Profile from './components/Profile/Profile'
 import Dashboard from './components/dashboard/Dashboard'
 import Auth from './authenticated/Auth'
+import Report from './components/report/Report'
 
 import Test from './components/test/Test'
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/register' component={Register} />
           <Route exact path='/profile'><Auth cp={Profile} /></Route>
           <Route exact path='/dashboard'><Auth cp={Dashboard} /></Route>
+          <Route exact path='/report'><Auth cp={Report} /></Route>
           <Route exact path='/test' component={Test} />
         </ContextProvider>
       </Switch>

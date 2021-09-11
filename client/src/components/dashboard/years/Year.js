@@ -11,6 +11,7 @@ function Year(props) {
     //get necessary data
     const wallet = props.wallets.filter((wallet) =>
         wallet.walletId.toString() === localStorage.getItem('walletId'))[0]
+    console.log(wallet)
     const trades = wallet.trades
     const { view } = useContext(context)
 
@@ -26,10 +27,10 @@ function Year(props) {
 
     //set year
     if (!onLoad)
-    setTimeout(() => {
-        document.getElementsByClassName('trade-list')[0].style.transform = `translate(${-800* (d.getFullYear() - 2020)}px)`
-        setOnLoad(true)
-    }, 100);
+        setTimeout(() => {
+            document.getElementsByClassName('trade-list')[0].style.transform = `translate(${-800 * (d.getFullYear() - 2020)}px)`
+            setOnLoad(true)
+        }, 100);
 
     function switchYear(status) {
         const tradeList = document.getElementsByClassName('trade-list')[0]
@@ -48,7 +49,7 @@ function Year(props) {
 
     //create trade list
     function createTradeList(year) {
-        
+
         return (<div className="month-in-year"><Accordion defaultActiveKey={d.getMonth().toString()}>
             {
                 ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((month, id) => {
