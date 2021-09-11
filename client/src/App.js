@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
 import ContextProvider from './contextProvider/context'
+import Welcome from './components/welcomePage/Welcome'
 import Login from './components/loginAndRegister/Login'
 import Register from './components/loginAndRegister/Register'
 import Profile from './components/Profile/Profile'
@@ -17,6 +18,7 @@ function App() {
     <Router>
       <Switch>
         <ContextProvider>
+          <Route exact path='/' component={Welcome} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route exact path='/profile'><Auth cp={Profile} /></Route>

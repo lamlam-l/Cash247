@@ -1,0 +1,80 @@
+.welcome {
+    width: 100%;
+}
+
+.welcome .header{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url('../assets/img/landingHeader.jpg') no-repeat;
+    background-size: cover;
+    font-family: Georgia, serif;
+}
+
+.welcome .header .text {
+    position: absolute;
+    max-width: 500px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 150px;
+    text-align: center;
+}
+
+.welcome .header h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 100px;
+}
+
+.welcome .header h4 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.welcome .banner {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.welcome .banner .welcome-icon {
+    font-size: 70px;
+    color: rgb(77, 145, 255);
+}
+
+.welcome .banner h3 {
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.welcome .banner p {
+    font-size: 20px;
+    margin: auto;
+    width: 70%;
+    color: rgb(146, 146, 146);
+}
+
+.welcome .auth {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    text-align: center;
+}
+.welcome .auth h2 {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.welcome .footer {
+    padding: 10px;
+    margin-top: 200px;
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.welcome .footer a {
+    color: white;
+}

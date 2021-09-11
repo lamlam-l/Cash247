@@ -4,6 +4,7 @@ import { Redirect } from 'react-router'
 
 import { url } from '../../constants/constants'
 import Loading from '../loading/Loading'
+import Currency from '../logic/currencyFormater/currency'
 
 function Repost() {
     const [report, setReport] = useState({
@@ -21,9 +22,12 @@ function Repost() {
                     onLoading: false,
                 })
             } else {
-                console.log(wallets)
                 setReport({
-                    view: <h1>report</h1>,
+                    view: <div className="report">
+                        <p>report</p>
+                        <p>report</p>       
+                        <h1>chua lam</h1>
+                    </div>,
                     onLoading: false
                 })
             }

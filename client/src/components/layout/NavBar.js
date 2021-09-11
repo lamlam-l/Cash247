@@ -14,9 +14,9 @@ function NavBar() {
     }
     
     return (<>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" style={{position: 'fixed', zIndex: '1', width: '100%', top: '0'}}>
             <Container>
-                <Navbar.Brand href="#home" style={style.title} className="colorTransition">Cash247</Navbar.Brand>
+                <Navbar.Brand href="/" style={style.title} className="colorTransition">Cash247</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

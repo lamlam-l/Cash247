@@ -38,17 +38,18 @@ function Dashboard() {
                         <Row>
                             <Col>
                                 <div className="detail-layout">
-                                    <Detail wallet={wallets[localStorage.getItem('walletId') - 1]} />
+                                    <Detail wallet={wallets.filter((wallet) => wallet.walletId.toString() === localStorage.getItem('walletId'))[0]} />
                                 </div>
                             </Col>
                             <Col>
                                 <Year wallets={wallets} />
+                                <br />
+                                <br />
                             </Col>
                             <Col>
                                 <div className="option-layout">
                                     <Options />
                                     <br />
-
                                 </div>
                                 <div className="changeWallet-layout">
                                     <ChangeWallet wallets={wallets} />

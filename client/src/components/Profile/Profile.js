@@ -93,7 +93,7 @@ function Profile() {
 
 
     return (<>
-        <Container className="mt-4">
+        <Container style={{ marginTop: '80px' }}>
             <Card>
                 <Card.Header as="h5">Profile
                     <FontAwesomeIcon

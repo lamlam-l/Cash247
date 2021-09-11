@@ -27,6 +27,7 @@ function Login() {
             if (respone.data.success) {
                 localStorage.setItem('name', loginForm.name)
                 localStorage.setItem('currentUnit', 'USD')
+                localStorage.setItem('say', 'bao mat level max :)   chua hoc ve he thong dang nhap, dang ky, khoa cong khai, khoa rieng tu cac thu... nen chi biet lam moi nhu the nay')
                 history.push('/dashboard')
             } else {
                 setAlert({ variant: "danger", message: respone.data.message })

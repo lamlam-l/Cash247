@@ -22,18 +22,14 @@
 .dashboard .detail-layout {
     max-width: 500px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 128px;
     
 }
 
 .dashboard .option-layout {
     max-width: 500px;
     margin: auto;
-    margin-top: 50px;
-    
-}
-
-.dashboard .changeWallet-layout {
+    margin-top: 80px;
     
 }
 /* _________________________________________________________________________________________________ */
@@ -105,6 +101,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     margin: auto;
+    margin-top: 80px;
 }
 
 .year .switch-year {
@@ -325,7 +322,18 @@
     padding: 20px;
 }
 /* ______________start year______________ */
+/* _________________________________________________________________________________________________ */
 
 
 
+
+
+
+
+
+
+/* _______________________________________report____________________________________________________ */
+.report {
+    background-image: url(https://wallpaperaccess.com/full/666602.jpg);
+}
 /* _________________________________________________________________________________________________ */
