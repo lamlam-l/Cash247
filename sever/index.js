@@ -24,4 +24,4 @@ app.use(cors())
 const route = require('./src/routers/index')
 route(app)
 
-app.listen(5000, () => { })
+app.listen(process.env.PORT || 5000, () => { })

@@ -26,7 +26,7 @@ function Repost() {
                     view: <div className="report">
                         <p>report</p>
                         <p>report</p>       
-                        <h1>chua lam</h1>
+                        
                     </div>,
                     onLoading: false
                 })

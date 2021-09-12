@@ -1,9 +1,9 @@
 ### get wallets data
-POST http://localhost:5000/dashboard/wallet/getWallets
+POST https://cash247sever.herokuapp.com/dashboard/wallet/getWallets
 Content-Type: application/json
 
 {
-    "name": "lam2"
+    "name": "lam"
 }
 
 ### add a wallet

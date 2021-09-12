@@ -40,7 +40,7 @@ function Welcome() {
             <span> if you already have an account</span>
         </div>}
         <div className="footer">
-            <span>made by lam. If you find bug, error, feel free to contact to me at <a href="https://www.facebook.com/nguyentunglamxxxx">here</a></span>
+            <span>made by <a href="https://www.facebook.com/nguyentunglamxxxx">lam</a></span>
         </div>
     </div>)
 }
